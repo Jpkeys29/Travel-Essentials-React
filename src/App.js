@@ -22,7 +22,7 @@ export default function App() {
       <Logo />
       <Form onAddItems={handleAddItems} />
       <PackingList items={items} onDeleteItem={handleDeleteItem} onCheckItem={handleCheckItem} />
-      <Stats />
+      <Stats items={items}/>
     </div>
   );
 }
@@ -69,6 +69,7 @@ function Form({onAddItems}) {
     </form>
   );  
 }
+
 function PackingList({items, onDeleteItem, onCheckItem}) {
   return (
     <div className="list">
@@ -91,10 +92,12 @@ function Item({item, onDeleteItem, onCheckItem}) {
   ) 
 }
 
-function Stats() {
+function Stats({items}) {
+  const numItems = items.length;
+
   return (
     <footer className="stats">
-      <em>I have X items on you my list, and I already packed x (X%) 🧳</em>
+      <em>I have {numItems} items on you my list, and I already packed x (X%) 🧳</em>
     </footer>
   );
 }
