@@ -94,10 +94,11 @@ function Item({item, onDeleteItem, onCheckItem}) {
 
 function Stats({items}) {
   const numItems = items.length;
+  const itemsPacked = items.filter((item) => item.packed).length;
 
   return (
     <footer className="stats">
-      <em>I have {numItems} items on you my list, and I already packed x (X%) 🧳</em>
+      <em>I have {numItems} items on you my list, and I already packed {itemsPacked} (X%) 🧳</em>
     </footer>
   );
 }
