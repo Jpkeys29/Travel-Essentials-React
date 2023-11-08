@@ -95,10 +95,14 @@ function Item({item, onDeleteItem, onCheckItem}) {
 function Stats({items}) {
   const numItems = items.length;
   const itemsPacked = items.filter((item) => item.packed).length;
+  const percentage = Math.round((itemsPacked/numItems)*100);
 
   return (
     <footer className="stats">
-      <em>I have {numItems} items on you my list, and I already packed {itemsPacked} (X%) 🧳</em>
+      <em>
+        {percentage === 100 ? "You are all set! 🧨 " :
+        `I have ${numItems} items on you my list, and I already packed ${itemsPacked} (${percentage}%) 🧳`}
+      </em>
     </footer>
   );
 }
