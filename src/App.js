@@ -93,6 +93,12 @@ function Item({item, onDeleteItem, onCheckItem}) {
 }
 
 function Stats({items}) {
+  if (!items.length)
+    return (
+      <p className="stats">
+        <em>Time to pack! 🚀</em>
+      </p>
+    );
   const numItems = items.length;
   const itemsPacked = items.filter((item) => item.packed).length;
   const percentage = Math.round((itemsPacked/numItems)*100);
