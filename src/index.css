@@ -28,7 +28,7 @@ body {
 
 h1 {
   text-align: center;
-  background-color: #f4a226;
+  background-color: #D6BBC0;
   font-family: "Monoton";
   font-size: 8rem;
   text-transform: uppercase;
@@ -39,7 +39,7 @@ h1 {
 }
 
 .add-form {
-  background-color: #e5771f;
+  background-color: #BC69AA;
   padding: 2.8rem 0;
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@ input {
 }
 
 .list {
-  background-color: #5a3e2b;
+  background-color:#D0A3BF;
   color: #ffebb3;
   padding: 4rem 0;
 
@@ -113,7 +113,7 @@ input {
 input[type="checkbox"] {
   height: 2rem;
   width: 2rem;
-  accent-color: #e5771f;
+  accent-color:#C585B3;
 }
 
 .list li button {
@@ -126,7 +126,7 @@ input[type="checkbox"] {
 }
 
 .stats {
-  background-color: #76c7ad;
+  background-color:#AF42AE;
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
